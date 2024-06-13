@@ -13,7 +13,7 @@ This project is a simple Java application that provides a graphical user interfa
 
 
 ### Clone the Repository
-```bash
+
 git clone https://github.com/prosedus007/LoginPage_with_java.git
 cd LoginPage_with_java
 
@@ -22,3 +22,6 @@ cd LoginPage_with_java
 
 ![img](Images/loginpage.png)
 ![img1](Images/Signup.png)
+
+
+
