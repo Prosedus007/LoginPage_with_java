@@ -6,14 +6,37 @@ package login;
 
 /**
  *
- * @author msrau
+ * @author msraut
+ * 
  */
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+
 public class Login {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
+        
+        String url = "jdbc:mysql://localhost:3306/login";
+        String user = "root";
+        String password = "prosedus";
+ 
+            class.forName("com.mysql.cj.jdbc.Driver");
+//            class.forName("oracle.jdbc.driver.OracleDriver");
+            try(Connection connection =DriverManager.getConnection(url,user,password)){
+            if(connection != null){
+                System.out.println("Connected to database");
+            }else{
+                System.out.println("Connection Failed");
+            }
+            }catch(SQLException e){
+                System.out.println(e);
+            }
+     
+        
+        
+        
         // TODO code application logic here
         Login1 LoginFrame = new Login1();
         LoginFrame.setVisible(true);
